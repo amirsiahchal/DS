@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Switcher</title>
+  <style>
+    #image1, #image2, #image3, #image4, #image5, #image6 {
+      position: relative;
+      width: 16.6%;
+      height: 100vh;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div id="image1">
+    <img id="img1" src="" alt="Image 1">
+  </div>
+  <div id="image2">
+    <img id="img2" src="" alt="Image 2">
+  </div>
+  <div id="image3">
+    <img id="img3" src="" alt="Image 3">
+  </div>
+  <div id="image4">
+    <img id="img4" src="" alt="Image 4">
+  </div>
+  <div id="image5">
+    <img id="img5" src="" alt="Image 5">
+  </div>
+  <div id="image6">
+    <img id="img6" src="" alt="Image 6">
+  </div>
+  <div id="background">
+    <img id="backgroundImage" src="https://i.ibb.co/Yd8bmMP/5jzznpd3x6oa1.jpg" alt="Background Image">
+  </div>
+  <script>
+    let currentImage = 1;
+    let image1Url = 'https://i.ibb.co/xCpX9CQ/68a8a75f7ed1623dcb48565a152a7dc7.png';
+    let image2Url = 'https://i.ibb.co/nBDp6Yp/first-porn-collage-how-did-i-do-4d1e8zex2j-540x540.jpg';
+    let image3Url = 'https://i.ibb.co/Gnh5b86/images-6.jpg';
+    let image4Url = 'https://i.ibb.co/b5gvKPG/pic-1-big.jpg';
+    let image5Url = 'https://i.ibb.co/ZNDwkJf/540816-a-booty-collage.jpg';
+    let image6Url = 'https://i.ibb.co/sWNvzRM/1.jpg';
+
+    document.getElementById('img1').src = image1Url;
+    document.getElementById('img2').src = image2Url;
+    document.getElementById('img3').src = image3Url;
+    document.getElementById('img4').src = image4Url;
+    document.getElementById('img5').src = image5Url;
+    document.getElementById('img6').src = image6Url;
+
+    function switchImages() {
+      if (currentImage === 1) {
+        document.getElementById('img1').src = image2Url;
+        document.getElementById('img2').src = image3Url;
+        document.getElementById('img3').src = image4Url;
+        document.getElementById('img4').src = image5Url;
+        document.getElementById('img5').src = image6Url;
+        document.getElementById('img6').src = image1Url;
+        currentImage = 2;
+      } else if (currentImage === 2) {
+        document.getElementById('img1').src = image6Url;
+        document.getElementById('img2').src = image1Url;
+        document.getElementById('img3').src = image2Url;
+        document.getElementById('img4').src = image3Url;
+        document.getElementById('img5').src = image4Url;
+        document.getElementById('img6').src = image5Url;
+        currentImage = 3;
+      } else if (currentImage === 3) {
+        document.getElementById('img1').src = image5Url;
+        document.getElementById('img2').src = image6Url;
+        document.getElementById('img3').src = image1Url;
+        document.getElementById('img4').src = image2Url;
+        document.getElementById('img5').src = image3Url;
+        document.getElementById('img6').src = image4Url;
+        currentImage = 4;
+      } else if (currentImage === 4) {
+        document.getElementById('img1').src = image4Url;
+        document.getElementById('img2').src = image5Url;
+        document.getElementById('img3').src = image6Url;
+        document.getElementById('img4').src = image1Url;
+        document.getElementById('img5').src = image2Url;
+        document.getElementById('img6').src = image3Url;
+        currentImage = 5;
+      } else if (currentImage === 5) {
+        document.getElementById('img1').src = image3Url;
+       document.getElementById('img2').src = image4Url;
+        document.getElementById('img3').src = image5Url;
+        document.getElementById('img4').src = image6Url;
+        document.getElementById('img5').src = image1Url;
+        document.getElementById('img6').src = image2Url;
+        currentImage = 1;
+      }
+    }
+
+    setInterval(switchImages, 10);
+  </script>
+</body>
+</html>
