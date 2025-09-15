@@ -22,8 +22,6 @@ PHONE_NUMBERS_FILE = 'phone_numbers.json'  # فایل جدید برای ذخیر
 SUBJECT_MAP_FA_TO_EN = {
     "ریاضی": "math",
     "فیزیک": "physics",
-    "شیمی": "chemistry",
-    "زیست": "biology"
 }
 SUBJECT_MAP_EN_TO_FA = {v: k for k, v in SUBJECT_MAP_FA_TO_EN.items()}
 
@@ -237,8 +235,6 @@ def start(message):
             keyboard = telebot.types.InlineKeyboardMarkup()
             keyboard.add(telebot.types.InlineKeyboardButton("ریاضی", callback_data="ask_subject_math"))
             keyboard.add(telebot.types.InlineKeyboardButton("فیزیک", callback_data="ask_subject_physics"))
-            keyboard.add(telebot.types.InlineKeyboardButton("شیمی", callback_data="ask_subject_chemistry"))
-            keyboard.add(telebot.types.InlineKeyboardButton("زیست", callback_data="ask_subject_biology"))
             bot.send_message(user_id, f"دانش‌آموز گرامی، اشتراک شما تا تاریخ {subscription_end_date} فعال است.\nلطفاً درس مورد نظر برای ارسال سوال را انتخاب کنید:", reply_markup=keyboard)
         else:
             bot.reply_to(message, "دانش‌آموز گرامی، شما اشتراک فعالی ندارید. برای راهنمایی جهت تهیه اشتراک /help را بزنید.")
@@ -262,8 +258,6 @@ def handle_contact(message):
             keyboard = telebot.types.InlineKeyboardMarkup()
             keyboard.add(telebot.types.InlineKeyboardButton("ریاضی", callback_data="ask_subject_math"))
             keyboard.add(telebot.types.InlineKeyboardButton("فیزیک", callback_data="ask_subject_physics"))
-            keyboard.add(telebot.types.InlineKeyboardButton("شیمی", callback_data="ask_subject_chemistry"))
-            keyboard.add(telebot.types.InlineKeyboardButton("زیست", callback_data="ask_subject_biology"))
             bot.send_message(user_id, f"دانش‌آموز گرامی، اشتراک شما تا تاریخ {subscription_end_date} فعال است.\nلطفاً درس مورد نظر برای ارسال سوال را انتخاب کنید:", reply_markup=keyboard)
         else:
             bot.reply_to(message, "دانش‌آموز گرامی، شما اشتراک فعالی ندارید. برای راهنمایی جهت تهیه اشتراک /help را بزنید.")
@@ -875,5 +869,5 @@ def handle_report_reason(message):
 # —--------------------------
 # اجرای ربات
 # —--------------------------
-print("ربات در حال اجراست...")
+print("ربات در حال اجرا می باشد ...")
 bot.infinity_polling()
